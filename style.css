@@ -3,17 +3,24 @@
     padding: 0;
 }
 
+html, body {
+    scroll-behavior: smooth;
+    height: 100%; 
+}
+
 .main{
     width: 100%;
     background: url(images/bg5.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
+    background-attachment: fixed;
     position: relative;
     font-family: sans-serif;
 }
 
 .navbar{
+    position: fixed;
     width: 100%;
     height: 4%;
     display: flex;
@@ -21,11 +28,19 @@
     padding: 15px 0;
     align-items: center;
     justify-content: center;
-    /*background-color: black;
-    opacity: 0.8;*/
+    margin: 0 auto;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color .5s ease;
+    transition: .3s ease;
 }
 
-
+.navbar.scrolled{
+    background-color: #0c0f13;
+    justify-content: center;
+    margin-top: -10px;
+    padding-left: 53px;
+}
 
 
 ul{
@@ -48,8 +63,7 @@ ul li a{
                  0 0 10px #ad30bb,   
                  0 0 15px #ad30bb,
                  0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
-    transition: .4s ease;
+                 5px 5px 30px #ad30bb;    
 }
 
 ul li a:hover{
@@ -91,22 +105,127 @@ ul li a:hover{
 }
 
 .icons {
-    margin-left: 37%;
+    margin-left: 32%;
     margin-top: 40px;
     
 }
 
 .icons a{
-    padding-right: 60px;
+    padding: 25px;
     text-decoration: none;
     color: #0cc0df;    
 }
 
 .icons ion-icon{
     font-size: 20px;
+    border: 1px solid #0cc0df;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .icons ion-icon:hover{
     color: #ad30bb;
-    transition: .3s ease;
+    transition: .2s ease;
+    border-color: #ad30bb;
+}
+
+.about{
+    width: 100%;
+    background: url(images/bg6.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.intro h1{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 100px;
+    color: magenta;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #ad30bb,    
+                 0 0 10px #ad30bb,   
+                 0 0 15px #ad30bb,
+                 0 0 20px #ad30bb,
+                 5px 5px 30px #ad30bb;
+    font-weight: 400;
+}
+
+.intro h1 p{
+    font-size: 10px;
+    margin-right: 910px;
+    letter-spacing: 1px;
+    margin-bottom: -10px;
+    color: #0cc0df;
+    margin-top: 2px;
+}
+
+.intro h3{
+    font-size: 17px; 
+    font-weight: lighter;
+    max-width: 1000px; 
+    text-align: center;
+    margin: 25px auto; 
+    padding: 0 20px; 
+    color: #0cc0df; 
+    line-height: 1.6;
+    text-shadow: 0 0 5px #0cc0df,    
+                 0 0 10px #0cc0df,   
+                 0 0 15px #0cc0df;
+    
+}
+
+.edu h1{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 100px;
+    color: magenta;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #ad30bb,    
+                 0 0 10px #ad30bb,   
+                 0 0 15px #ad30bb,
+                 0 0 20px #ad30bb,
+                 5px 5px 30px #ad30bb;
+    font-weight: 400;
+    margin-bottom: -20px;
+}
+
+.edu h2{
+    font-size: 25px; 
+    font-weight: 300;
+    text-align: center;  
+    color: #0cc0df; 
+    line-height: 1.6;
+    margin: 10px auto;
+    text-shadow: 0 0 5px #0cc0df,    
+                 0 0 10px #0cc0df,   
+                 0 0 15px #0cc0df;
+}
+
+.edu ion-icon{
+    font-size: 20px;
+    margin-left: 23%;
+    margin-bottom: -51px;
+    color: #0cc0df;
+    border: 1px solid #0cc0df;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.edu h3{
+    font-size: 19px; 
+    font-weight: 100;
+    text-align: center;  
+    color: #0cc0df;; 
+    margin-bottom: -50px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #0cc0df,    
+                0 0 10px #0cc0df,   
+                0 0 15px #0cc0df;
+}
+
+.edu .rocket-icon{
+    margin-left: -20%;
 }

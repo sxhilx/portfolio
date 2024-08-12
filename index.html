@@ -11,7 +11,7 @@
         <div class="navbar">
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="#about">ABOUT</a></li>
                 <li><a href="#">SKILLS</a></li>
                 <li><a href="#">PROJECTS</a></li>
                 <li><a href="#">RESUME</a></li>
@@ -32,6 +32,45 @@
 
      </div>
 
+
+     <div id ="about" class="about">
+        <div class="intro">
+            <h1>INTRODUCTION <p>Hello There !</p></h1>
+            <h3>Ambitious second-year Information Technology student with a strong foundation in C++, JavaScript, Python, PHP, HTML and CSS. Proficient in developing innovative projects that demonstrate practical application of academic knowledge. Seeking opportunities to contribute fresh perspectives and grow within a professional environment.</h3>
+        </div>
+        <div class="edu">
+            <h1>EDUCATION</h1>
+            
+            <a href="https://www.richfield.ac.za/">
+                <ion-icon name="school"></ion-icon>
+            </a>
+            <h2>| RICHFIELD GRADUATE INSTITUTE OF TECHNOLOGY</h2>
+
+            
+            <h3>
+                Bachelor of Science in Information Technology (BSc IT)
+            </h3>
+        </div>
+
+     </div>
+
      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     <script>
+        window.addEventListener("scroll", function() {
+        var navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY < 0) {
+                window.scrollTo(0, 0);
+            }
+        });
+
+     </script>
 </body>
 </html>
