@@ -214,6 +214,12 @@ ul li a:hover{
     padding: 5px;
 }
 
+.edu ion-icon:hover{
+    color: #ad30bb;
+    transition: .3s ease;
+    border-color: #ad30bb;
+}
+
 .edu h3{
     font-size: 19px; 
     font-weight: 100;
@@ -299,5 +305,128 @@ progress::-moz-progress-bar {
 }
 
 .projects{
+    width: 100%;
+    background: url(images/bg7.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.projects table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid magenta;
+}
+
+.projects h1{
+    font: 1.5em sans-serif;
+    color: magenta;
+    letter-spacing: 1px;
+    padding-top: 70px;
+    text-shadow: 0 0 5px #ad30bb,    
+                 0 0 10px #ad30bb,   
+                 0 0 15px #ad30bb,
+                 0 0 20px #ad30bb,
+                 5px 5px 30px #ad30bb;
+    font-weight: 100;
+    margin-bottom: 45px;
+}
+
+.projects ion-icon{
+    display: inline-block;
+    font-size: 20px;
+    color: #0cc0df;
+    border: 1px solid #0cc0df;
+    border-radius: 50%;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.projects ion-icon:hover{
+    color: #ad30bb;
+    transition: .3s ease;
+    border-color: #ad30bb;
+}
+
+.projects th{
+    font: 1.25em sans-serif;
+    color: magenta;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #ad30bb,    
+                 0 0 10px #ad30bb,   
+                 0 0 15px #ad30bb,
+                 0 0 20px #ad30bb,
+                 5px 5px 30px #ad30bb;
+    font-weight: 100;    
+    text-align: center;
+    padding-top: 20px;     
+    vertical-align: middle;  
+ }
+
+ .projects td{
+    color: #0cc0df;
+    font-size: 15px;
+    padding: 35px;
+    text-shadow: 0 0 5px #0cc0df,    
+                 0 0 10px #0cc0df,   
+                 0 0 15px #0cc0df;
+ }
+
+ .resume{
+    width: 100%;
+    background: url(images/bg7.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+ }
+
+ .resume h1{
+    font: 1.5em sans-serif;
+    color: magenta;
+    letter-spacing: 1px;
+    padding-top: 70px;
+    text-shadow: 0 0 5px #ad30bb,    
+                 0 0 10px #ad30bb,   
+                 0 0 15px #ad30bb,
+                 0 0 20px #ad30bb,
+                 5px 5px 30px #ad30bb;
+    font-weight: 100;
+}
+
+.resume img{
+    width: 28%;
+    float: left;
+    margin-left: 30px;
+}
+
+.breif h3{
+    margin-top: 5%;
+    color: #0cc0df;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-shadow: 0 0 5px #0cc0df,    
+                 0 0 10px #0cc0df,   
+                 0 0 15px #0cc0df;
     
 }
+
+.breif p{
+    display: inline-block;
+    color: #0cc0df;
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-shadow: 0 0 5px #0cc0df,    
+                 0 0 10px #0cc0df,   
+                 0 0 15px #0cc0df;
+    width: 40%;
+    margin-top: 50px;
+}
+
+
+
+
