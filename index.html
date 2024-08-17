@@ -18,6 +18,8 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
+
+        
         <div class="info">
             <img src="images/SJ3.png" class="logo">
             <h1> <span>S</span>TUDENT | <span>F</span>ULLSTACK <br> <span>D</span>EVELOPER </h1>            
@@ -189,36 +191,38 @@
 
             <div id="contact" class="contact">
                 <h1>GET IN TOUCH</h1>
-                <p>I’d love to hear from you! Whether you have a question, a project in mind, or just want to say hello, feel free to contact me.</p>
+                
                 <div class="container">
-                    <div class="location">
-                        <h3>LOCATION</h3>
-                        <a href="https://maps.app.goo.gl/fvqXju68Qeb7LTyPA"> <ion-icon name="location"></ion-icon> DURBAN, SOUTH AFRICA</a>
-                    </div>
-                    <div class="phone">
-                        <h3>PHONE</h3>
-                        <a href="tel:+27812765709"> <ion-icon name="call"></ion-icon> +27 81 276 5709</a>
-                    </div>
-                    <div class="email">
-                        <h3>EMAIL</h3>
-                        <a href="mailto:jadasahil06@gmail.com"> <ion-icon name="mail"></ion-icon> jadasahil06@gmail.com</a>
-                    </div>
-                    <div class="web">
-                        <h3>WEBSITE</h3>
-                        <a href="#"> <ion-icon name="globe-outline"></ion-icon> SAHIL JADA</a>
-                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value="f028ce60-c9c2-4070-9783-546b55160fac">
+
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="Name" placeholder="Enter your name" required><br>
+
+                        <label for="Email">Email: </label>
+                        <input type="email" name="email" id="Email" placeholder="Enter your email" required><br>
+
+                        <label for="message" class="message">Message: </label>
+                        <textarea name="message" id="Message" rows="5" placeholder="Enter your message"></textarea><br>
+                    
+                        <button type="submit">Submit Form</button>
+                    
+                    </form>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="footer-content">
-                    <p>&copy; 2024 Sahil Jada. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#privacy-policy">Privacy Policy</a>
-                        <a href="#terms-of-service">Terms of Service</a>
-                        <a href="#contact">Contact</a>
+             <footer class="footer">
+                    <div class="footer-content">
+                        <p>&copy; 2024 Sahil Jada. All rights reserved.</p>
+                        <div class="footer-links">
+                            <a href="#privacy-policy">Privacy Policy</a>
+                            <a href="#terms-of-service">Terms of Service</a>
+                            <a href="#contact">Contact</a>
+                        </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
+
+
      </div>
 
      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

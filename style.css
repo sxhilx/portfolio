@@ -73,6 +73,8 @@ ul li a:hover{
     transition: .4s ease;
 }
 
+
+
 .info .logo{
     width: 230px;
     cursor: pointer;
@@ -128,6 +130,123 @@ ul li a:hover{
     transition: .2s ease;
     border-color: #ad30bb;
 }
+
+@media only screen and (max-width: 768px) {
+    
+    .main{
+        background-image: url(images/mobile-bg1.png);
+    }
+   
+    .navbar {
+      height: 8%;
+    }
+    ul {
+      margin-right: 5%;
+    }
+    ul li {
+      padding: 5px;
+    }
+    ul li a {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+      height: 5%;
+    }
+    ul {
+      margin-right: 5%;
+    }
+    ul li {
+      padding: 8px;
+    }
+    ul li a {
+      font-size: 14px;
+    }
+    .info .logo {
+      width: 180px;
+      margin-left: 30%;
+    }
+    .info h1 {
+      font-size: 24px;
+      margin-left: -60px;
+    }
+    .icons {
+      margin-left: 25%;
+    }
+  }
+  
+  /* Mobile (>= 480px) and (<= 767px) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .navbar {
+      height: 6%;
+    }
+    ul {
+      margin-right: 3%;
+    }
+    ul li {
+      padding: 6px;
+    }
+    ul li a {
+      font-size: 12px;
+    }
+    .info .logo {
+      width: 140px;
+      margin-left: 20%;
+    }
+    .info h1 {
+      font-size: 18px;
+      margin-left: -40px;
+    }
+    .icons {
+      margin-left: 15%;
+    }
+  }
+  
+  /* Small Mobile (<= 479px) */
+  @media only screen and (max-width: 479px) {
+    .navbar {
+      height: 8%;
+    }
+    ul {
+      margin-right: 12%;
+    }
+    ul li {
+      padding: 4px;
+    }
+    ul li a {
+      font-size: 12px;
+    }
+
+    .info .logo {
+      width: 110px;
+      margin-left: 35%;
+      margin-top: 10%;
+    }
+
+    .info h1 {
+      font-size: 20px;
+      margin-left: -20px;
+    }
+
+    .icons {
+      margin-left: 20%;
+      background: black;
+      margin-right: 37%;
+    }
+
+    .icons a{
+        padding: 6px;
+    }
+
+    .icons ion-icon{
+        font-size: 15px;
+        border: 1px solid #0cc0df;
+        border-radius: 50%;
+        padding: 5px;
+    }
+  }
 
 .about{
     width: 100%;
@@ -458,7 +577,7 @@ progress::-moz-progress-bar {
 
 .contact h1{
     font-family: sans-serif;
-    padding-top: 70px;
+    padding-top: 40px;
     font-size: 1.75rem;
     text-align: center;
     font-weight: 200;
@@ -469,80 +588,69 @@ progress::-moz-progress-bar {
                  0 0 15px #ad30bb,
                  0 0 20px #ad30bb,
                  5px 5px 30px #ad30bb;
+    margin-bottom: 20px;
 }
 
-.contact p{
-    display: inline-block;
-    color: #0cc0df;
+.container {
+    align-items: center;
+  }
+  
+  .container label {
+    display: block;
     font-family: sans-serif;
-    text-align: center;
+    color: #0cc0df;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #0cc0df, 0 0 10px #0cc0df, 0 0 15px #0cc0df;
+    flex: 1;
+  }
+
+  .container input, .container textarea {
+    background-color: #15191f;
+    border: #0cc0df 1px solid;
+    padding: 8px;
+    margin: 15px;
+    color: magenta;
+    font-family: sans-serif;
     font-size: 1rem;
-    font-weight: 200;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
+    border-radius: 5px;
     width: 40%;
-    margin-top: 20px;
+    outline: none;
+    flex: 1;
+  }
+
+.container input{
+    width: 27%;
 }
 
-.contact h3{
+.container textarea{
+    height: 100px;
+}
+
+
+.container textarea, input::placeholder{
     font-family: sans-serif;
-    font-size: 1.75rem;
-    font-weight: 200;
-    color: magenta;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
-                 padding: 20px;
-    padding-top: 50px;
-}
-
-.contact a{
-    font-family: sans-serif;
-    text-decoration: none;
-    letter-spacing: 2px;
     color: #0cc0df;
-    text-shadow: 0 0 5px #0cc0df,    
-                0 0 10px #0cc0df,   
-                0 0 15px #0cc0df;
-    padding: 10px;
 }
 
-.container .location{
-    margin-right: 50%;
+
+.container button{
+  padding: 8px;
+  width: 200px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #0cc0df;
+
+  background-color: #0f1216;
+  cursor: pointer;
+  border: 1px solid magenta;
+  transition: .3s ease;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-.container .phone{
-    margin-left: 50%;
-    margin-top: -120px;
-}
-
-.container .email{
-    margin-right: 50%;
-}
-
-.container .web{
-    margin-left: 50%;
-    margin-top: -120px;
-}
-
-.container ion-icon{
-    display: inline-block;
-    font-size: 15px;
-    color: #0cc0df;
-    border: 1px solid #0cc0df;
-    border-radius: 50%;
-    padding: 5px;
-    vertical-align: middle;
-}
-
-.container ion-icon:hover{
-    color: #ad30bb;
-    transition: .3s ease;
-    border-color: #ad30bb;
+.container button:hover{
+  color: magenta;
+  border-color: #0cc0df;
 }
 
 .footer {
@@ -577,7 +685,12 @@ progress::-moz-progress-bar {
     text-decoration: underline; 
 }
 
+.navbar-toggle{
+    display: none;
+}
 
-
+.navbar-toggle-label{
+    display: none;
+}
 
 
