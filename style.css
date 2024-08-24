@@ -1,14 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
+    min-height: 100vh;
     scroll-behavior: smooth;
-    height: 100%; 
 }
 
-.main{
+.main {
     width: 100%;
     background: url(images/bg5.png);
     background-position: center;
@@ -19,7 +20,7 @@ html, body {
     font-family: sans-serif;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
     height: 4%;
@@ -31,224 +32,142 @@ html, body {
     margin: 0 auto;
     background-color: transparent;
     z-index: 1000;
-    transition: background-color .5s ease;
-    transition: .3s ease;
+    transition: background-color 0.5s ease;
+    transition: 0.3s ease;
 }
 
-.navbar.scrolled{
+.navbar.scrolled {
     background-color: #0c0f13;
-    justify-content: center;
-    margin-top: -10px;
-    padding-left: 53px;
+    margin-top: -6px;
 }
 
-
-ul{
-    margin-right: 8%;
-    margin-top: 2%;
-}
-
-ul li{
+ul li {
     list-style: none;
     display: inline-block;
-    padding: 10px;    
+    padding: 10px;
 }
 
-ul li a{
+ul li a {
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     color: magenta;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;    
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
 }
 
-ul li a:hover{
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px rgba(179, 49, 179, 0),   
-                 0 0 15px rgba(179, 49, 179, 0);
-    transition: .4s ease;
+ul li a ion-icon {
+    font-size: 25px;
 }
 
 
+ul li a:hover {
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px rgba(179, 49, 179, 0),
+        0 0 15px rgba(179, 49, 179, 0);
+    transition: 0.4s ease;
+}
 
-.info .logo{
-    width: 230px;
+.sidebar{
+    background-color: #0f1216;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
     cursor: pointer;
-    margin-left: 38%;
-    padding: 2px;
-    margin-top: 4%;
+}
+
+.menu-button{
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
     
 }
 
-.info h1{
+.info .logo {
+    display: block;
+    margin: 0 auto;
+    width: 230px;
+    cursor: pointer;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.info h1 {
     font-size: 30px;
     margin-left: -90px;
     margin-top: -15px;
     color: #0cc0df;
     text-align: center;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
     letter-spacing: 2px;
 }
 
-
-.info span{
+.info span {
     color: magenta;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
 }
 
 .icons {
-    margin-left: 32%;
-    margin-top: 40px;
-    
+    text-align: center;
+    margin-top: 30px;
+    margin-left: -90px;
 }
 
-.icons a{
-    padding: 25px;
+.icons a {
+    padding: 15px;
     text-decoration: none;
-    color: #0cc0df;    
+    color: #0cc0df;
 }
 
-.icons ion-icon{
+.icons ion-icon {
     font-size: 20px;
     border: 1px solid #0cc0df;
     border-radius: 50%;
     padding: 10px;
 }
 
-.icons ion-icon:hover{
+.icons ion-icon:hover {
     color: #ad30bb;
-    transition: .2s ease;
+    transition: 0.2s ease;
     border-color: #ad30bb;
 }
 
-@media only screen and (max-width: 768px) {
-    
-    .main{
-        background-image: url(images/mobile-bg1.png);
-    }
-   
-    .navbar {
-      height: 8%;
-    }
-    ul {
-      margin-right: 5%;
-    }
-    ul li {
-      padding: 5px;
-    }
-    ul li a {
-      font-size: 14px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .navbar {
-      height: 5%;
-    }
-    ul {
-      margin-right: 5%;
-    }
-    ul li {
-      padding: 8px;
-    }
-    ul li a {
-      font-size: 14px;
-    }
-    .info .logo {
-      width: 180px;
-      margin-left: 30%;
-    }
-    .info h1 {
-      font-size: 24px;
-      margin-left: -60px;
-    }
-    .icons {
-      margin-left: 25%;
-    }
-  }
-  
-  /* Mobile (>= 480px) and (<= 767px) */
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .navbar {
-      height: 6%;
-    }
-    ul {
-      margin-right: 3%;
-    }
-    ul li {
-      padding: 6px;
-    }
-    ul li a {
-      font-size: 12px;
-    }
-    .info .logo {
-      width: 140px;
-      margin-left: 20%;
-    }
-    .info h1 {
-      font-size: 18px;
-      margin-left: -40px;
-    }
-    .icons {
-      margin-left: 15%;
-    }
-  }
-  
-  /* Small Mobile (<= 479px) */
-  @media only screen and (max-width: 479px) {
-    .navbar {
-      height: 8%;
-    }
-    ul {
-      margin-right: 12%;
-    }
-    ul li {
-      padding: 4px;
-    }
-    ul li a {
-      font-size: 12px;
-    }
-
-    .info .logo {
-      width: 110px;
-      margin-left: 35%;
-      margin-top: 10%;
-    }
-
-    .info h1 {
-      font-size: 20px;
-      margin-left: -20px;
-    }
-
-    .icons {
-      margin-left: 20%;
-      background: black;
-      margin-right: 37%;
-    }
-
-    .icons a{
-        padding: 6px;
-    }
-
-    .icons ion-icon{
-        font-size: 15px;
-        border: 1px solid #0cc0df;
-        border-radius: 50%;
-        padding: 5px;
-    }
-  }
-
-.about{
+.about {
     width: 100%;
     background: url(images/bg2.png);
     background-position: center;
@@ -258,21 +177,22 @@ ul li a:hover{
     font-family: sans-serif;
 }
 
-.intro h1{
+.intro h1 {
     font-size: 2rem;
     text-align: center;
     padding-top: 100px;
     color: magenta;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
     font-weight: 400;
 }
 
-.intro h1 p{
+.intro h1 p {
     font-size: 10px;
     margin-right: 910px;
     letter-spacing: 1px;
@@ -281,49 +201,51 @@ ul li a:hover{
     margin-top: 2px;
 }
 
-.intro h3{
-    font-size: 17px; 
+.intro h3 {
+    font-size: 17px;
     font-weight: lighter;
-    max-width: 1000px; 
+    max-width: 1000px;
     text-align: center;
-    margin: 25px auto; 
-    padding: 0 20px; 
-    color: #0cc0df; 
+    margin: 25px auto;
+    padding: 0 20px;
+    color: #0cc0df;
     line-height: 1.6;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
-    
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
 }
 
-.edu h1{
+.edu h1 {
     font-size: 2rem;
     text-align: center;
     padding-top: 100px;
     color: magenta;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
     font-weight: 400;
     margin-bottom: -20px;
 }
 
-.edu h2{
-    font-size: 25px; 
+.edu h2 {
+    font-size: 25px;
     font-weight: 300;
-    text-align: center;  
-    color: #0cc0df; 
+    text-align: center;
+    color: #0cc0df;
     line-height: 1.6;
     margin: 10px auto;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
 }
 
-.edu ion-icon{
+.edu ion-icon {
     font-size: 20px;
     margin-left: 23%;
     margin-bottom: -51px;
@@ -333,25 +255,29 @@ ul li a:hover{
     padding: 5px;
 }
 
-.edu ion-icon:hover{
+.edu ion-icon:hover {
     color: #ad30bb;
-    transition: .3s ease;
+    transition: 0.3s ease;
     border-color: #ad30bb;
 }
 
-.edu h3{
-    font-size: 19px; 
+.edu h3 {
+    font-size: 19px;
     font-weight: 100;
-    text-align: center;  
-    color: #0cc0df;; 
+    text-align: center;
+    color: #0cc0df;
     margin-bottom: -50px;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px #0cc0df,    
-                0 0 10px #0cc0df,   
-                0 0 15px #0cc0df;
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
 }
 
-.skills{
+
+
+
+.skills {
     width: 100%;
     background: url(images/bg7.png);
     background-position: center;
@@ -359,22 +285,25 @@ ul li a:hover{
     height: 100vh;
     position: relative;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.headings{
+.headings {
     font: 1.25em sans-serif;
     padding: 100px;
     color: magenta;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
     font-weight: 100;
 }
 
-.headings table{
+.headings table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 90%;
@@ -384,34 +313,33 @@ ul li a:hover{
     border-bottom: 1px solid magenta;
 }
 
-.headings th{
-   text-align: center;
-   padding-top: 20px;   
+.headings th {
+    text-align: center;
+    padding-top: 20px;
 }
 
-.headings td{
+.headings td {
     color: #0cc0df;
     font-size: 15px;
     padding: 20px;
     padding-bottom: 20px;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
-    
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
 }
 
-.headings progress{
+.headings progress {
     margin: auto;
-    width: 70%; 
+    width: 70%;
 }
-
 
 progress {
-    width: 100%; 
-    height: 6px; 
-    -webkit-appearance: none; 
-    appearance: none; 
-    border-radius: none; 
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: none;
     background-color: #000000;
 }
 
@@ -423,7 +351,7 @@ progress::-moz-progress-bar {
     background-color: #0cc0df;
 }
 
-.projects{
+.projects {
     width: 100%;
     background: url(images/bg7.png);
     background-position: center;
@@ -431,30 +359,37 @@ progress::-moz-progress-bar {
     height: 100vh;
     position: relative;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    margin-top: -50px;
 }
 
-.projects table{
+
+
+.projects table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 90%;
     border: 1px solid magenta;
 }
 
-.projects h1{
+.projects h1 {
     font: 1.5em sans-serif;
     color: magenta;
     letter-spacing: 1px;
     padding-top: 70px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
     font-weight: 100;
-    margin-bottom: 45px;
+    margin-bottom: 10px;
 }
 
-.projects ion-icon{
+.projects ion-icon {
     display: inline-block;
     font-size: 20px;
     color: #0cc0df;
@@ -464,38 +399,41 @@ progress::-moz-progress-bar {
     vertical-align: middle;
 }
 
-.projects ion-icon:hover{
+.projects ion-icon:hover {
     color: #ad30bb;
-    transition: .3s ease;
+    transition: 0.3s ease;
     border-color: #ad30bb;
 }
 
-.projects th{
+.projects th {
     font: 1.25em sans-serif;
     color: magenta;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
-    font-weight: 100;    
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
+    font-weight: 100;
     text-align: center;
-    padding-top: 20px;     
-    vertical-align: middle;  
- }
+    padding-top: 15px;
+    vertical-align: middle;
+}
 
- .projects td{
+.projects td {
     font-family: sans-serif;
     color: #0cc0df;
     font-size: 14px;
     padding: 35px;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
- }
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
+}
 
- .resume{
+
+.resume {
     width: 100%;
     background: url(images/bg7.png);
     background-position: center;
@@ -503,48 +441,49 @@ progress::-moz-progress-bar {
     height: 100vh;
     position: relative;
     text-align: center;
- }
+}
 
-.resume img{
+.resume img {
     padding-top: 70px;
     width: 29%;
     float: left;
     margin-left: 80px;
 }
 
-.breif h3{
+.breif h3 {
     font-family: sans-serif;
     padding-top: 150px;
     font-size: 1.75rem;
     font-weight: 200;
     color: magenta;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
-    
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
 }
 
-.breif p{
+.breif p {
     display: inline-block;
     color: #0cc0df;
     font-family: sans-serif;
     font-size: 1.25rem;
     font-weight: 200;
-    text-shadow: 0 0 5px #0cc0df,    
-                 0 0 10px #0cc0df,   
-                 0 0 15px #0cc0df;
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
     width: 40%;
     margin-top: 50px;
 }
 
-.dl-button{
+.dl-button {
     margin-top: 70px;
 }
 
-.dl-button button{
+.dl-button button {
     width: 16%;
     font-size: 16px;
     padding: 10px;
@@ -552,59 +491,65 @@ progress::-moz-progress-bar {
     background-color: #ad30bb;
     border: none;
     border-radius: 5px;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
-.dl-button button:hover{
+.dl-button button:hover {
     background-color: black;
     color: magenta;
-    text-shadow: 0 0 5px #ad30bb,    
-                0 0 10px #ad30bb,   
-                0 0 15px #ad30bb,
-                0 0 20px #ad30bb,
-                5px 5px 30px #ad30bb;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
 }
 
-.contact{
+
+.contact {
     width: 100%;
     background: url(images/bg7.png);
     background-position: center;
     background-size: cover;
     height: 80vh;
     position: relative;
-
 }
 
-.contact h1{
+.contact h1 {
     font-family: sans-serif;
-    padding-top: 40px;
+    padding-top: 20px;
     font-size: 1.75rem;
     text-align: center;
     font-weight: 200;
     color: magenta;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px #ad30bb,    
-                 0 0 10px #ad30bb,   
-                 0 0 15px #ad30bb,
-                 0 0 20px #ad30bb,
-                 5px 5px 30px #ad30bb;
-    margin-bottom: 20px;
+    text-shadow:
+        0 0 5px #ad30bb,
+        0 0 10px #ad30bb,
+        0 0 15px #ad30bb,
+        0 0 20px #ad30bb,
+        5px 5px 30px #ad30bb;
+    margin-bottom: 10px;
 }
 
 .container {
     align-items: center;
-  }
-  
-  .container label {
+}
+
+.container label {
     display: block;
     font-family: sans-serif;
     color: #0cc0df;
     font-size: 1.2rem;
-    text-shadow: 0 0 5px #0cc0df, 0 0 10px #0cc0df, 0 0 15px #0cc0df;
+    text-shadow:
+        0 0 5px #0cc0df,
+        0 0 10px #0cc0df,
+        0 0 15px #0cc0df;
     flex: 1;
-  }
+}
 
-  .container input, .container textarea {
+.container input,
+.container textarea {
     background-color: #15191f;
     border: #0cc0df 1px solid;
     padding: 8px;
@@ -616,81 +561,160 @@ progress::-moz-progress-bar {
     width: 40%;
     outline: none;
     flex: 1;
-  }
+}
 
-.container input{
+.container input {
     width: 27%;
 }
 
-.container textarea{
+.container textarea {
     height: 100px;
 }
 
-
-.container textarea, input::placeholder{
+.container textarea,
+input::placeholder {
     font-family: sans-serif;
     color: #0cc0df;
 }
 
-
-.container button{
-  padding: 8px;
-  width: 200px;
-  font-family: sans-serif;
-  font-size: 15px;
-  color: #0cc0df;
-
-  background-color: #0f1216;
-  cursor: pointer;
-  border: 1px solid magenta;
-  transition: .3s ease;
-  border-radius: 5px;
-  margin-top: 10px;
+.container button {
+    padding: 8px;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #0cc0df;
+    background-color: #0f1216;
+    cursor: pointer;
+    border: 1px solid magenta;
+    transition: 0.3s ease;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
-.container button:hover{
-  color: magenta;
-  border-color: #0cc0df;
+.container button:hover {
+    color: magenta;
+    border-color: #0cc0df;
 }
 
 .footer {
-    background-color: #0c0f13; 
+    background-color: #0c0f13;
     color: #fff;
-    padding: 20px 0; 
-    text-align: center; 
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer-content {
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer p {
-    margin: 0; 
-    font-size: 0.9rem; 
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .footer-links {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .footer-links a {
-    color: #0cc0df; 
+    color: #0cc0df;
     margin: 0 15px;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 0.9rem;
 }
 
 .footer-links a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     display: none;
 }
 
-.navbar-toggle-label{
+.navbar-toggle-label {
     display: none;
 }
 
 
+@media(max-width:720px){
+    .hideOnMobile{
+        display: none;
+    }
+    .sidebar{
+        width: 30%;
+    }  
+    .navbar{
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #0c0f13;
+        margin-top: -10px;
+        padding-left: 30px
+        padding-bottom: 20px;
+    }
+    .navbar.scrolled{
+        justify-content: flex-start;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+
+@media (max-width: 900px){  
+    
+    
+    .about{
+        background: url(images/bg7.png);
+    }
+    .intro h1 {
+        font-size: 1.5rem;
+        padding-top: 100px;
+    }
+    .intro h1 p {
+        font-size: 8px;
+        width: 100%;
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: -15px;
+    }
+    .intro h3 {
+        font-size: 18px;
+        font-weight: lighter;
+        text-align: center;
+        margin: 15px auto;
+        padding-top: 5px;
+    }
+    .edu h1 {
+        font-size: 1.5rem;
+    }
+    .edu h2{
+        font-size: 20px;
+    }
+    .edu ion-icon{
+        margin-left: 16%;
+        font-size: 15px;
+        margin-bottom: -45px;
+    }
+    
+    .projects h1{
+        font-size: 1.25rem;
+    } 
+    
+    .projects th {
+        font: 1em sans-serif;        
+        padding-top: 5px;        
+    }
+    .projects td {
+        font-size: 12px;
+        padding: 15px;
+    }
+    
+    .resume img {
+        padding-top: 70px;
+        width: 45%;
+        margin-left: 40px;
+    }
+    
+    
+}
